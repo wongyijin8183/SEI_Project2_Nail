@@ -15,16 +15,18 @@ class Registration extends React.Component {
         </head> 
         <body>
           <Navbar/>
-          <h3>Registration Page</h3>
-          <form action="/register" method="POST">
-                Enter Your Details Here:
-                <br></br>
-                <input type="text" name="name" placeholder="name"/>
-                <br></br>
-                <input type="password" name="password" placeholder="password"/>
-                <br></br>
-                <input type="submit" value="Submit"/>
+          <div style={{textAlign:'center'}}> 
+            <h3  style={{color:"#33b5a4"}}>Registration Page</h3>
+            <form action="/register" method="POST">
+                  Enter Your Details Here:
+                  <br></br>
+                  <input type="text" name="name" placeholder="name"/>
+                  <br></br>
+                  <input type="password" name="password" placeholder="password"/>
+                  <br></br>
+                  <input type="submit" value="Submit"/>
             </form>
+          </div>
         </body>
       </html>
     );

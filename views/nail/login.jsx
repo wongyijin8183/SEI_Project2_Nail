@@ -16,18 +16,19 @@ class Login extends React.Component {
         </head> 
         <body>
           <Navbar/>
-          <h3>Login Page</h3>
-          <form action="/login" method="POST">
-                Enter Your Login Details Here:
-                <br></br>
-                <input type="text" name="name" placeholder="name"/>
-                <br></br>
-                <input type="password" name="password" placeholder="password"/>
-                <br></br>
-                <input type="submit" value="Submit"/>
-            </form> 
-            <p>Don't have an account? Register <a href="/register">here</a></p>
-                    
+          <div style={{textAlign:'center'}}> 
+            <h3 style={{color:"#33b5a4"}}>Login Page</h3>
+            <form action="/login" method="POST">
+                  Enter Your Login Details Here:
+                  <br></br>
+                  <input type="text" name="name" placeholder="name"/>
+                  <br></br>
+                  <input type="password" name="password" placeholder="password"/>
+                  <br></br>
+                  <input type="submit" value="Submit"/>
+              </form> 
+              <p>Don't have an account? Register <a href="/register">here</a></p>
+          </div>         
         </body>
       </html>
     );

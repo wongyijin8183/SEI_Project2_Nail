@@ -32,24 +32,26 @@ class bookForm extends React.Component {
         </head> 
         <body>
           <Navbar/>
-          <h3>Booking Page</h3>
-          <form action="/book" method="POST">
-                Enter Booking Details Here: 
-                <br></br>
-                <select name="menu_id">
-                    <option value="">Choose a service</option>
-                    {list}
-                </select>
-                <br></br>
-                <input type="date" name="date" placeholder="yyyy-mm-dd" min={dateString}/>
-                <br></br>
-                <select name="time">
-                    <option value="">Choose a timing</option>
-                    {timing}
-                </select>
-                <br></br>
-                <input type="submit" value="Submit"/>
-            </form>
+          <div style={{textAlign:'center'}}> 
+            <h3 style={{color:"#33b5a4"}}>Booking Page</h3>
+            <form action="/book" method="POST">
+                  Enter Booking Details Here: 
+                  <br></br>
+                  <select name="menu_id">
+                      <option value="">Choose a service</option>
+                      {list}
+                  </select>
+                  <br></br>
+                  <input type="date" name="date" placeholder="yyyy-mm-dd" min={dateString}/>
+                  <br></br>
+                  <select name="time">
+                      <option value="">Choose a timing</option>
+                      {timing}
+                  </select>
+                  <br></br>
+                  <input type="submit" value="Submit"/>
+              </form>
+          </div>
         </body>
       </html>
     );
