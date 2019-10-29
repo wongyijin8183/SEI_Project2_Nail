@@ -21,7 +21,7 @@ class Registration extends React.Component {
                 <br></br>
                 <input type="text" name="name" placeholder="name"/>
                 <br></br>
-                <input type="text" name="password" placeholder="password"/>
+                <input type="password" name="password" placeholder="password"/>
                 <br></br>
                 <input type="submit" value="Submit"/>
             </form>

@@ -5,26 +5,21 @@
  */
 module.exports = (dbPoolInstance) => {
 
-  // `dbPoolInstance` is accessible within this function scope
-
   let getAllUser = (callback) => {
     let query = 'SELECT * FROM users';
     dbPoolInstance.query(query, (error, queryResult) => {
       if( error ){
-        // invoke callback function with results after query has executed
         callback(error, null);
       }else{
-        // invoke callback function with results after query has executed
         if( queryResult.rows.length > 0 ){
           callback(null, queryResult.rows);
-          // console.log(queryResult.rows);
         }else{
           callback(null, null);
         }
       }
     });
   };
-//===================================================================================
+//============================================================================
 
   let profileUser = (id, callback) => {
     let userId = id;
@@ -46,7 +41,11 @@ module.exports = (dbPoolInstance) => {
     });
   };
 
-//===================================================================================
+//========================================================================
+
+  
+
+//===========================================================================
   
   let getAllMenu = (callback) => {
     let query = 'SELECT * FROM menu';
@@ -64,7 +63,7 @@ module.exports = (dbPoolInstance) => {
       }
     });
   };
-//===================================================================================
+//============================================================================
 
   var sha256 = require('js-sha256');
   var SALT = "mrbombastic";
@@ -89,7 +88,7 @@ module.exports = (dbPoolInstance) => {
     });
   };
 
-//===================================================================================
+//===========================================================================
 
   let checkUser = (user, callback) => {
     let input = [user.name];
@@ -100,11 +99,10 @@ module.exports = (dbPoolInstance) => {
         callback(error, null);
       } else {
         if (result.rows.length > 0) {
-          // console.log("RESULT IS:" , result.rows)
           if (sha256(user.password + SALT) === result.rows[0].password && user.name === result.rows[0].name) {
             callback(null, result.rows[0]);
           } else {
-            callback(null, "correct");
+            callback(null, "wrongpassword");
           }
         } else {
           callback(null, null);

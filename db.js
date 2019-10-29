@@ -59,9 +59,8 @@ pool.on('error', function (err) {
  */
 
 
-const allNailModelsFunction = require('./models/userMod');
-
-const nailModelsObject = allNailModelsFunction( pool );
+const nail = require('./models/userMod')( pool );
+const booking = require('./models/bookingMod')( pool );
 
 
 
@@ -91,5 +90,6 @@ module.exports = {
    * ADD APP MODELS HERE
    */
 
-  nail: nailModelsObject
+  nail: nail,
+  booking: booking
 };

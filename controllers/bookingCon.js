@@ -17,29 +17,43 @@ module.exports = (db) => {
     });
   };
 //==================================================
+  let bookedCC = (request, response) => {
+    const newBook = request.body;
+    const userCookies = request.cookies;
+    db.booking.postNewBook (newBook, userCookies, (error, booking) => {
+      if (error) {
+        console.error ("query error: ", error.stack);
+        response.send("something wrong with your booking");
+      } else {
+        let data = {
+          booking : booking
+        }
+        // response.render ('/nail/bookConfirm', data);
+        // response.send(newBook);
+        response.redirect(`/user/${request.cookies.user_id}`);
+      }
+    })
+  }
 
+//==================================================
+// let adminCC = (request, response) => {
+//   db.nail.adminBooks(id, (error, adminInfo) => {
+//     if (error) {
+//       console.error("query error:", error.stack);
+//       response.send("query error");
+//     } else {
+//       let data = {
+//       admin : adminInfo
+//       }
+//       response.render('nail/userProfile', data);
+//     }
+//   });
+// };
 
 //==================================================
 
-
-
 //==================================================
-  // let registeredCC = (request, response) => {
-  //   const newUser = request.body;
-  //   console.log(request.body);
-  //   db.nail.postNewUser(newUser, (error, user) => {
-  //     if (error) {
-  //       console.error("query error: ", error.stack);
-  //       let data = {
-  //         message: "Invalid Username"
-  //       }
-  //       response.send("invalid");
-  //     } else {
-  //       response.redirect ('/login');
-  //       // response.send("user registered");
-  //     }
-  //   });
-  // };
+
 
 //==================================================
 
@@ -51,7 +65,10 @@ module.exports = (db) => {
    */
   return {
     bookForm : bookFormCC,
-    // registration : registrationCC,
+    booked : bookedCC
+    // admin : adminCC
+    // userbookings : userBookingsCC
+    
 
   };
 

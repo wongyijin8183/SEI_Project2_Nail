@@ -13,11 +13,10 @@ CREATE TABLE IF NOT EXISTS menu (
 
 CREATE TABLE IF NOT EXISTS bookings (
     id SERIAL PRIMARY KEY,
-    user_id INTEGER,
-    menu_id INTEGER,
     date DATE,
-    start_time FLOAT,
-    end_time FLOAT,
-    attendance TEXT,
-    notification TEXT
+    time TIME,
+    menu_id INTEGER,
+    user_id INTEGER,
+    confirmed TEXT DEFAULT 'NO',
+    show TEXT
 );
