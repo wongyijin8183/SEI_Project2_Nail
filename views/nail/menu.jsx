@@ -51,6 +51,12 @@ class Menu extends React.Component {
                   </div>
               </div>
             </div>
+            <div>
+              <img src="http://www.manicurious.sg/wordpress2016/wp-content/uploads/2019/08/manicurious-menu-front-768x497.jpg" alt="menu"/>
+            </div>
+            <div>
+              <img src="http://www.manicurious.sg/wordpress2016/wp-content/uploads/2019/08/Manicurious-services-menu-2019-back-768x497.jpg" alt="parties"/>
+            </div>
           </div> 
         </body>
       </html>

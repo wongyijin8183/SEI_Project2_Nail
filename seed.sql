@@ -22,3 +22,14 @@ INSERT INTO menu (service, price, time) VALUES ('Presto Infill Gel (set)', 160, 
 INSERT INTO menu (service, price, time) VALUES ('Scrub-A-Dub-Dub', 8, 10);
 INSERT INTO menu (service, price, time) VALUES ('Nail Repair (Clear Gel)', 15, 20);
 
+
+insert into bookings (date, time, menu_id, user_id, confirmed, show) values ('2019-11-15', '11:30:00', 4, 4, 'No', 'not_yet');
+insert into bookings (date, time, menu_id, user_id, confirmed, show) values ('2019-11-12', '13:00:00', 11, 4, 'Yes', 'not_yet');
+insert into bookings (date, time, menu_id, user_id, confirmed, show) values ('2019-10-31', '17:30:00', 5, 4, 'Yes', 'not_yet');
+insert into bookings (date, time, menu_id, user_id, confirmed, show) values ('2019-7-15', '12:30:00', 4, 4, 'Yes', 'attended');
+insert into bookings (date, time, menu_id, user_id, confirmed, show) values ('2019-9-20', '16:00:00', 10, 4, 'Yes', 'attended');
+insert into bookings (date, time, menu_id, user_id, confirmed, show) values ('2019-10-25', '15:00:00', 3, 4, 'Yes', 'absent');
+insert into bookings (date, time, menu_id, user_id, confirmed, show) values ('2019-10-19', '14:00:00', 12, 4, 'Yes', 'attended');
+insert into bookings (date, time, menu_id, user_id, confirmed, show) values ('2019-10-15', '11:00:00', 7, 4, 'Yes', 'attended');
+insert into bookings (date, time, menu_id, user_id, confirmed, show) values ('2019-10-15', '11:00:00', 7, 4, 'Yes', 'attended');
+

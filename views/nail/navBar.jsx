@@ -4,7 +4,7 @@ class navbar extends React.Component {
     render() {
 
         return (
-            <nav class="navbar navbar-expand-lg navbar-light " style={{backgroundColor: "#33b5a4"}}>
+            <nav class="navbar navbar-expand-lg navbar-light " style={{backgroundColor: "#33b5a4", paddingLeft:"30px", paddingRight:"30px"}}>
                 <a class="navbar-brand mb-0 h1" href="/" style={{color:"white"}}>A Nail Salon</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -23,7 +23,7 @@ class navbar extends React.Component {
                 <button class="btn btn-outline-secondary my-2 my-sm-0 text-right" type="submit" style={{color:"white", borderColor:"white"}}>Book an Appointment</button>
             </form>
             <form method="GET" action="/login" class="form-inline my-2 my-lg-0">      
-                <button class="btn btn-outline-secondary my-2 my-sm-0 text-right" type="submit" style={{color:"white", borderColor:"white"}}>Log In</button>
+                <button class="btn btn-outline-secondary my-2 my-sm-0 text-right" type="submit" style={{color:"white", borderColor:"white", marginLeft:"20px"}}>Log In</button>
             </form>
             {/* <form method="POST" action="/logout" class="form-inline my-2 my-lg-0">      
                 <button class="btn btn-outline-secondary my-2 my-sm-0 text-right" type="submit">Log Out</button>
